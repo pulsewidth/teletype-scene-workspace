@@ -1,0 +1,11 @@
+I:
+M 500; O.MAX 4800; O 0
+
+M:
+A O; B 0
+W NZ A: $ 1
+D ADD NZ MOD B 2 1
+TR.PULSE D
+
+1:
+B ADD B MOD A 2; A DIV A 2

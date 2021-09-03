@@ -1,0 +1,45 @@
+Reich Piano Phase/Clapping
+
+
+
+#1
+P.N 0
+CV 1 N P.NEXT
+X ADD TIME 3
+M X
+TIME 0
+TR.PULSE 1
+
+#2
+P.N 1
+CV 2 N P.NEXT
+
+#3
+P.N 2
+P.L 12
+IF EQ P.NEXT 1 : TR.PULSE 3
+P.N 3
+P.L 60
+IF EQ P.NEXT 1 : TR.PULSE 4
+
+#4
+
+#5
+
+#6
+
+#7
+
+#8
+
+
+#M
+TR.PULSE 2
+
+#I
+P.N 0
+P.I 12
+P.N 1
+P.I 12
+M.ACT 1
+L 1 4 : TR I 0

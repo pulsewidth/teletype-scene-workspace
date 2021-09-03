@@ -1,0 +1,61 @@
+MOSSY
+
+#1
+A EZ A
+$ 3; $ 6
+IF AND B C: TR.P 2
+
+#2
+B EZ B
+$ 3; $ 6
+IF OR A C: TR.P 3
+IF EZ OR A C: TR.P 4
+
+#3
+C EZ C; $ 6
+X + A + * 2 B * 4 C
+CV 1 N + P X Y
+TR.P 1
+G.LED 15 - 7 X 15
+DEL 100: G.REC 15 0 1 8 0 0
+
+#4
+Z * G.FDR.N 1 G.BTN.V 4
+Y - Z * G.FDR.N 2 G.BTN.V 5
+CV 1 N + P X Y
+
+#5
+IF G.BTN.V 6: TR.P 1
+
+#6
+T TIME; TIME 0
+D + TOSS + * 2 C + * 4 B * 8 A
+L 2 3: CV.SLEW I * TOSS / T 2
+CV 2 VV LSH D 5
+CV 3 VV - 480 LSH D 5
+IF G.BTN.V 7: CV 4 CV 2
+
+#7
+G.BTN 4 5 1 6 2 1 2 4
+G.BTN 5 5 5 6 2 1 2 4
+G.BTN 6 3 1 2 6 1 4 5
+G.BTN 7 11 1 2 6 1 4 6
+G.FDR 1 1 0 13 1 0 2 4
+G.FDR 2 1 7 13 1 0 2 4
+
+#8
+DEL 75: X DIV QT IN N 1 N 1
+DEL 75: P.INS 0 X
+DEL 75: P.L 8
+DEL 75: CV 1 N X
+DEL 76: TR.P 1
+
+#M
+
+#I
+P.N 0; P.L 8; G.RST; Z 0
+A 0; B 0; C 0; X 0; Y 0
+G.BTN 1 5 3 2 2 0 7 1
+G.BTN 2 7 3 2 2 0 4 2
+G.BTN 3 9 3 2 2 0 7 3
+M.ACT 0; TR.TIME 1 150; $ 7
