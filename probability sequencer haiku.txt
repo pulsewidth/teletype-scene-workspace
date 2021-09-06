@@ -1,0 +1,6 @@
+A 0; I RND 100; T % + T 1 8
+IF GT I 90: A 3
+ELIF GT I 70: A 2
+ELIF GT I 40: A 1
+CV 1 N PN A T; TR.P 1
+@X A; @Y T; @SHOW 1
