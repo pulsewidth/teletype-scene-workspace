@@ -1,0 +1,6 @@
+I 0; CV 2 RND V 5
+EVERY PN 1 0: I + I 1
+EVERY PN 1 1: I + I 2
+EVERY PN 1 2: I + I 3
+EVERY PN 1 3: I + I 4
+CV 1 N P % I 8; TR.P 1
