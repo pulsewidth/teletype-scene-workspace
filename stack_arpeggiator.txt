@@ -1,0 +1,10 @@
+// M -----------------------
+$ 1                          // a clock
+
+// 1 -----------------------
+S: TR.P 1; CV 1 N DRUNK      // put a pulse and a CV on the stack
+X ADD X 1                    // a typical counter
+IF GT X 16: S.POP            // let the carnage begin !!
+IF == X 32: S.CLR; X 0       // and stop it.
+PROB 5: DRUNK RND 4          // reset DRUNK every once in a while
+PROB 50: DRUNK; DRUNK; DRUNK // ( ^з^)ﾉ⌒♥*:･。.

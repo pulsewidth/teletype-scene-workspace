@@ -1,0 +1,54 @@
+#1
+J G.BTNX
+O ? > J 14 0 + J 1
+
+#2
+Y + X * 14 I
+A G.BTN.V + Y ? < Y 14 97 -15
+J G.BTN.V + Y -1
+K G.BTN.V + Y ? > Y 97 -99 13
+A ? J BSET A 1 A
+A ? K BSET A 2 A; $ 3
+
+#3
+G.BTN.V Y G.BTN.V + 116 A
+
+#4
+J G.BTNI
+IF == J 112: Z 0
+K AND == J 113 == Z 0
+IF K: Z 1; $ 6
+G.BTN.V 112 == J 112
+G.BTN.V 113 == J 113
+
+#5
+X O
+L 0 7: $ 2
+
+#6
+L 0 7: $ 7
+TR.P 4; J G.BTNI
+K >< 111 J 114
+IF G.BTN.V 113: $ 8
+
+#7
+J + 13 * I 14
+K V 5
+IF G.BTN.V J: JF.NOTE N P I K
+
+#8
+K 1000
+J SCALE 0 V 10 K 100 EXP PRM
+DEL J: $ 6
+
+M
+$ 5
+MUTE 6 G.BTN.V 113
+
+I
+G.BTX 0 0 0 1 1 1 4 1 14 8
+O.MIN 1; O.MAX 13
+M 25; JF.RMODE 1; JF.MODE 1
+G.BTX 116 15 0 1 1 1 4 1 1 8
+G.BTX 112 14 3 1 1 1 4 4 1 2
+$ 6; JF.RUN V 5

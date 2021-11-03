@@ -1,0 +1,22 @@
+trigger in trigger in 1
+org trigger comes out of trigger out 1
+divided by 4 comes out of trigger out 2
+multiplied by 2 comes out of trigger out 3
+
+#1
+TR.P 1
+M LAST $
+IF ! % T 4: $ 2
+DEL.R 2 / M 2: $ 3
+T + T 1
+
+#2
+TR.P 2
+
+#3
+TR.P 3
+
+#I
+L 1 4: TR.TIME I 40
+M.ACT 0
+T 0

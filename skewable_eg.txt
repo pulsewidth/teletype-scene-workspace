@@ -1,0 +1,5 @@
+// 1 ---------------------
+PARAM.SCALE 0 Z; Z 500     // set Z to desired envelope length
+X PARAM; Y ABS - X Z       // put PARAM on X and make Y its inverse, PARAM is now SKEW
+CV.SLEW 4 X; CV 4 V 10     // arms slew to attack amount and begins rise
+DEL X: CV.SLEW 4 Y; CV 4 0 // after attack is done, arm slew to release time and begin fall
